@@ -12,7 +12,7 @@ const SearchInput = () => {
           type="text"
           name="search-input"
           placeholder="Search GitHub username…"
-          className="w-[327px] h-[60px] bg-[#FEFEFE] rounded-[15px] text-[13px] leading-[25px] pl-[45px] outline-none placeholder-[#4B6A9B]"
+          className="w-[327px] max-w-[927px] h-[60px] bg-[#FEFEFE] rounded-[15px] text-[13px] leading-[25px] pl-[45px] outline-none placeholder-[#4B6A9B]"
         />
         <button
           type="submit"
