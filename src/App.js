@@ -1,7 +1,10 @@
-import "./App.css";
-
+import React from "react";
+import MainHeader from "./Components/Header/MainHeader";
 function App() {
-  return <h1>hi</h1>;
+  return (
+    <React.Fragment>
+      <MainHeader />
+    </React.Fragment>
+  );
 }
-
 export default App;
