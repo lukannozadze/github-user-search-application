@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 * {
-  background-color: #f2f2f2;
   font-family: "Space Mono";
+}
+
+body {
+  background-color: #f2f2f2;
 }
