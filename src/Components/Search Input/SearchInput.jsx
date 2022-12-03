@@ -2,7 +2,7 @@ import searchIconPath from "../../assets/search-icon.svg";
 const SearchInput = () => {
   return (
     <form className="flex flex-col items-center pt-[36px] w-screen ">
-      <label className="relative max-w-[87.2%] sm:w-[89.5%]">
+      <label className="relative w-[87.2%] sm:w-[89.5%] lg:w-[923px]">
         <img
           src={searchIconPath}
           alt="magnifying glass"

@@ -1,7 +1,7 @@
 import testUserImgPath from "../../assets/test-user-image.png";
 const SectionHeader = () => {
   return (
-    <div className="pt-[32px] flex flex-col px-[24px] ">
+    <div className="pt-[32px] flex flex-col px-[24px] sm:pl-[40px] md:pl-[45px] lg:pl-[60px] ">
       <div className="flex gap-[19px]">
         <img
           src={testUserImgPath}

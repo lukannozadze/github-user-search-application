@@ -1,6 +1,6 @@
 const DataIndicator = () => {
   return (
-    <div className="w-[85.3%] flex justify-center m-auto  py-[19px] rounded-[10px] gap-[25px] my-[24px]   bg-[#F6F8FF] sm:gap-[100px]">
+    <div className="w-[87.2%] flex justify-around m-auto  py-[19px] rounded-[10px] gap-[25px] my-[24px]  bg-[#F6F8FF]">
       <section className="flex flex-col items-center gap-[8px] sm:items-start">
         <span className="text-[11px] leading-[19px] text-[#4B6A9B] sm:text-[13px] sm:leading-[19px]">
           Repos
