@@ -6,14 +6,14 @@ const SearchInput = () => {
         <img
           src={searchIconPath}
           alt="magnifying glass"
-          className="absolute top-[20px] bg-[#FEFEFE] pl-[16px] sm:pl-[32px] sm:top-[23px]"
+          className="absolute top-[20px] bg-[#FEFEFE] pl-[16px] sm:pl-[32px] sm:top-[23px] dark:bg-[#1E2A47]"
         />
         <input
           type="text"
           name="search-input"
           placeholder="Search GitHub username…"
           className="w-[100%] h-[60px] bg-[#FEFEFE] rounded-[15px] text-[13px] leading-[25px] pl-[45px] outline-none placeholder-[#4B6A9B] shadow-xl 
-          sm:h-[69px] sm:pl-[80px] sm:text-[18px]"
+          sm:h-[69px] sm:pl-[80px] sm:text-[18px] dark:bg-[#1E2A47] dark:placeholder-white dark:text-white"
         />
         <button
           type="submit"
