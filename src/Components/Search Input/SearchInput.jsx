@@ -1,16 +1,36 @@
 import searchIconPath from "../../assets/search-icon.svg";
-const SearchInput = () => {
+import React from "react";
+import { useForm } from "react-hook-form";
+
+const SearchInput = (props) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ mode: "onChange" });
+
   return (
-    <form className="flex flex-col items-center pt-[36px] w-screen ">
+    <form
+      onSubmit={handleSubmit((data) => {
+        props.onGetUserName(data);
+      })}
+      className="flex flex-col items-center pt-[36px] w-screen "
+    >
       <label className="relative w-[87.2%] sm:w-[89.5%] lg:w-[923px]">
         <img
           src={searchIconPath}
           alt="magnifying glass"
           className="absolute top-[20px] bg-[#FEFEFE] pl-[16px] sm:pl-[32px] sm:top-[23px] dark:bg-[#1E2A47]"
         />
+        {errors.name?.type === "required" && (
+          <p className="absolute right-[120px] top-[23px] text-[#F74646] font-bold text-[15px]">
+            {errors.name.message}
+          </p>
+        )}
+
         <input
+          {...register("name", { required: "Should not be empty" })}
           type="text"
-          name="search-input"
           placeholder="Search GitHub username…"
           className="w-[100%] h-[60px] bg-[#FEFEFE] rounded-[15px] text-[13px] leading-[25px] pl-[45px] outline-none placeholder-[#4B6A9B] shadow-xl 
           sm:h-[69px] sm:pl-[80px] sm:text-[18px] dark:bg-[#1E2A47] dark:placeholder-white dark:text-white"
