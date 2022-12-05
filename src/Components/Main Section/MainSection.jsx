@@ -5,16 +5,18 @@ import AboutInfo from "./AboutInfo";
 import { useEffect, useState } from "react";
 const MainSection = (props) => {
   const [userArr, setUserArr] = useState([]);
-  const [isUserNameValid, setIsUserNameValid] = useState(true);
 
   const fetchGithubUsers = async () => {
     const response = await fetch(
       `https://api.github.com/users/${props.userName}`
     );
     if (response.status === 404) {
-      setIsUserNameValid(false);
+      props.onGetUserNameValidity(false);
+    } else {
+      props.onGetUserNameValidity(true);
     }
     const data = await response.json();
+    console.log(data);
     setUserArr(data);
   };
 
@@ -28,9 +30,9 @@ const MainSection = (props) => {
 
   return (
     <Card>
-      <SectionHeader />
-      <DataIndicator />
-      <AboutInfo />
+      <SectionHeader data={userArr} />
+      <DataIndicator data={userArr} />
+      <AboutInfo data={userArr} />
     </Card>
   );
 };

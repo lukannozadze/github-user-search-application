@@ -1,4 +1,4 @@
-const DataIndicator = () => {
+const DataIndicator = (props) => {
   return (
     <div className="w-[87.2%] flex justify-around m-auto  py-[19px] rounded-[10px] gap-[25px] my-[24px]  bg-[#F6F8FF] dark:bg-[#141D2F] dark:text-white  ">
       <section className="flex flex-col items-center gap-[8px] sm:items-start">
@@ -6,7 +6,7 @@ const DataIndicator = () => {
           Repos
         </span>
         <span className="text-[16px] leading-[24px] font-bold sm:text-[22px] sm:leading-[32px] ">
-          8
+          {props.data.length !== 0 ? props.data.public_repos : "8"}
         </span>
       </section>
       <section className="flex flex-col items-center gap-[8px] sm:items-start">
@@ -14,7 +14,7 @@ const DataIndicator = () => {
           Followers
         </span>
         <span className="text-[16px] leading-[24px] font-bold sm:text-[22px] sm:leading-[32px] ">
-          3938
+          {props.data.length !== 0 ? props.data.followers : "3975"}
         </span>
       </section>
       <section className="flex flex-col items-center gap-[8px] sm:items-start ">
@@ -22,7 +22,7 @@ const DataIndicator = () => {
           Following
         </span>
         <span className="text-[16px] leading-[24px] font-bold sm:text-[22px] sm:leading-[32px]">
-          9
+          {props.data.length !== 0 ? props.data.following : "9"}
         </span>
       </section>
     </div>

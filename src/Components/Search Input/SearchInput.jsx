@@ -22,10 +22,16 @@ const SearchInput = (props) => {
           alt="magnifying glass"
           className="absolute top-[20px] bg-[#FEFEFE] pl-[16px] sm:pl-[32px] sm:top-[23px] dark:bg-[#1E2A47]"
         />
-        {errors.name?.type === "required" && (
+        {errors.name?.type === "required" ? (
           <p className="absolute right-[120px] top-[23px] text-[#F74646] font-bold text-[15px]">
             {errors.name.message}
           </p>
+        ) : !props.isValid ? (
+          <p className="absolute right-[120px] top-[23px] text-[#F74646] font-bold text-[15px]">
+            No results
+          </p>
+        ) : (
+          ""
         )}
 
         <input
