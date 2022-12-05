@@ -1,6 +1,6 @@
 import useDarkMode from "../../hook/useDarkMode";
-import moonIconPath from "../../assets/moon.svg";
-import sunIconPath from "../../assets/sun.svg";
+import MoonIcon from "../UI/MoonIcon";
+import SunIcon from "../UI/SunIcon";
 
 const MainHeader = () => {
   const [colorTheme, setTheme] = useDarkMode();
@@ -10,20 +10,24 @@ const MainHeader = () => {
       <h1 className="text-[#222731] text-[26px] leading-[38.5px] dark:text-white">
         devfinder
       </h1>
-      <div onClick={() => setTheme(colorTheme)} className="flex gap-[16px]">
+      <div
+        onClick={() => setTheme(colorTheme)}
+        className="mode-container flex gap-[16px] cursor-pointer"
+      >
         {colorTheme === "light" ? (
-          <span className="text-[13px] leading-[19.5px] text-white tracking-[2.5px]">
+          <span className="mode-light-text text-[13px] leading-[19.5px] text-white tracking-[2.5px]">
             LIGHT
           </span>
         ) : (
-          <span className="text-[13px] leading-[19.5px] text-[#4B6A9B] tracking-[2.5px]">
+          <span className="mode-dark-text text-[13px] leading-[19.5px] text-[#4B6A9B] tracking-[2.5px] ">
             DARK
           </span>
         )}
-        <img
-          src={colorTheme === "light" ? sunIconPath : moonIconPath}
-          alt="moon"
-        />
+        {colorTheme === "light" ? (
+          <SunIcon color="white" />
+        ) : (
+          <MoonIcon color="#4B6A9B" />
+        )}
       </div>
     </div>
   );

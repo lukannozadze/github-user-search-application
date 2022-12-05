@@ -10,3 +10,16 @@
 body {
   background-color: #f2f2f2;
 }
+
+.mode-container:hover #moon-icon path {
+  fill: #222731;
+}
+.mode-container:hover .mode-dark-text {
+  color: #222731;
+}
+.mode-container:hover #sun-icon path {
+  fill: #90a4d4;
+}
+.mode-container:hover .mode-light-text {
+  color: #90a4d4;
+}

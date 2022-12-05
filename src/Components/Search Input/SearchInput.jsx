@@ -44,7 +44,7 @@ const SearchInput = (props) => {
         <button
           type="submit"
           value="submit"
-          className="absolute right-[7px] top-[6.5px] bg-[#0079FF] py-[12.5px] px-[16px] rounded-[10px] text-white text-[14px] font-bold leading-[21px] sm:top-[12.5px] sm:right-[10px] sm:text-[16px]"
+          className="absolute right-[7px] top-[6.5px] bg-[#0079FF] py-[12.5px] px-[16px] rounded-[10px] text-white text-[14px] font-bold leading-[21px] sm:top-[12.5px] sm:right-[10px] sm:text-[16px] hover:bg-[#60ABFF]"
         >
           Search
         </button>
