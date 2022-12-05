@@ -28,7 +28,7 @@ const SearchInput = (props) => {
           </p>
         ) : !props.isValid ? (
           <p
-            className="absolute right-[120px] top-[23px] text-[#F74646] font-bold text-[15px]  def:block def:text-[13px] def:top-[23px] def:right-[100px] 
+            className="absolute right-[120px] top-[23px] text-[#F74646] font-bold text-[15px]  def:block def:text-[13px] def:top-[22px] def:right-[100px] 
           sm:text-[15px] sm:right-[120px] sm:top-[24gpx]"
           >
             No results
