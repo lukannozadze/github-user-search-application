@@ -23,11 +23,14 @@ const SearchInput = (props) => {
           className="absolute top-[20px] bg-[#FEFEFE] pl-[16px] sm:pl-[32px] sm:top-[23px] dark:bg-[#1E2A47]"
         />
         {errors.name?.type === "required" ? (
-          <p className="absolute right-[120px] top-[23px] text-[#F74646] font-bold text-[15px]">
+          <p className="absolute right-[120px] top-[24px] hidden md:block text-[#F74646] font-bold text-[15px]  ">
             {errors.name.message}
           </p>
         ) : !props.isValid ? (
-          <p className="absolute right-[120px] top-[23px] text-[#F74646] font-bold text-[15px]">
+          <p
+            className="absolute right-[120px] top-[23px] text-[#F74646] font-bold text-[15px] xxsm:hidden xsm:block xsm:text-[13px] xsm:top-[22px] xsm:right-[100px] 
+          sm:text-[15px] sm:right-[120px] sm:top-[23px]"
+          >
             No results
           </p>
         ) : (
