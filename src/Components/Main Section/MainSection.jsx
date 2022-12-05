@@ -12,6 +12,7 @@ const MainSection = (props) => {
     );
     if (response.status === 404) {
       props.onGetUserNameValidity(false);
+      return;
     } else {
       props.onGetUserNameValidity(true);
     }
